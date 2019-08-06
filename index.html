@@ -16,7 +16,7 @@
   </head>
   <body>
     <div class="container" id="todo-app">
-        <h1 class="text-center app-title">My Todo App</h1>
+        <h1 class="text-center appTitle">My Todo App</h1>
         <div class="input-group mb-3">
             <input type="text" class="form-control form-control-lg" placeholder="Any pending tasks?"  v-model="newTodoName">
             <div class="input-group-append">
@@ -25,7 +25,7 @@
         </div>
         <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action" v-for="(todo, index) in todos" v-on:click="toggleDone(index)">
-                {{todo.name}}: {{todo.isDone}}
+                <span v-bind:class="{ doneTodo: todo.isDone }">{{todo.name}}</span>
                 <i class="far fa-trash-alt text-right float-right" @click="deleteTodo(index)"></i>                    
             </a>
         </div>
