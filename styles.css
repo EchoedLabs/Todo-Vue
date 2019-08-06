@@ -1,0 +1,7 @@
+.appTitle {
+    margin: 40px;
+}
+
+.doneTodo {
+    text-decoration: line-through;
+}
