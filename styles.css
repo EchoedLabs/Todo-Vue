@@ -5,3 +5,7 @@
 .doneTodo {
     text-decoration: line-through;
 }
+
+.deleteBtn {
+    margin-left: 15px;
+}
