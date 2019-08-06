@@ -15,8 +15,9 @@ var app = new Vue({
             const newTodo = {
                 name: this.newTodoName,
                 isDone: false
-            }
-            this.todos.push(newTodo)
+            };
+            this.todos.push(newTodo);
+            this.newTodoName = '';
         }
     }
   })

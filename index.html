@@ -18,7 +18,7 @@
     <div class="container" id="todo-app">
         <h1 class="text-center appTitle">My Todo App</h1>
         <div class="input-group mb-3">
-            <input type="text" class="form-control form-control-lg" placeholder="Any pending tasks?"  v-model="newTodoName">
+            <input type="text" class="form-control form-control-lg" placeholder="Any pending tasks?"  v-model="newTodoName" v-on:keyup.enter="addTodo">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" id="add-task-btn" v-on:click="addTodo">Add Task</button>
             </div>
