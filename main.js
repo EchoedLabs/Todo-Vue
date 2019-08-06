@@ -4,12 +4,17 @@ var app = new Vue({
       todos: [],
       newTodoName: ''
     },
+    created: function() {
+        if(localStorage.getItem("todos")) this.todos = JSON.parse(localStorage.getItem("todos"));
+    },
     methods: {
         toggleDone: function(index) {
             this.todos[index].isDone = !this.todos[index].isDone;
+            this.saveToLocalStorage();
         },
         deleteTodo: function(index) {
             this.todos.splice(index, 1);
+            this.saveToLocalStorage();
         },
         addTodo: function() {
             const newTodo = {
@@ -17,7 +22,11 @@ var app = new Vue({
                 isDone: false
             };
             this.todos.push(newTodo);
+            this.saveToLocalStorage();
             this.newTodoName = '';
+        },
+        saveToLocalStorage: function() {
+            localStorage.setItem("todos", JSON.stringify(this.todos));
         }
     }
   })
