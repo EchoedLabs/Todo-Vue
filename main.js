@@ -21,7 +21,7 @@ var app = new Vue({
                 name: this.newTodoName,
                 isDone: false
             };
-            this.todos.push(newTodo);
+            this.todos.unshift(newTodo);
             this.saveToLocalStorage();
             this.newTodoName = '';
         },
