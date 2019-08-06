@@ -9,3 +9,7 @@
 .deleteBtn {
     margin-left: 15px;
 }
+
+.actionBtn {
+    cursor: pointer;
+}

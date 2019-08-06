@@ -26,9 +26,9 @@
         <ul class="list-group">
             <li class="list-group-item list-group-item-action" v-for="(todo, index) in todos">
                 <span v-bind:class="{ doneTodo: todo.isDone }">{{todo.name}}</span>
-                <i class="far fa-trash-alt text-right float-right deleteBtn" v-on:click="deleteTodo(index)"></i>   
-                <i class="fas fa-check text-right float-right" v-on:click="toggleDone(index)" v-show="!todo.isDone"></i>                    
-                <i class="fas fa-redo text-right float-right" v-on:click="toggleDone(index)" v-show="todo.isDone"></i>                       
+                <i class="far fa-trash-alt text-right float-right deleteBtn actionBtn" v-on:click="deleteTodo(index)"></i>   
+                <i class="fas fa-check text-right float-right actionBtn" v-on:click="toggleDone(index)" v-show="!todo.isDone"></i>                    
+                <i class="fas fa-redo text-right float-right actionBtn" v-on:click="toggleDone(index)" v-show="todo.isDone"></i>                       
             </li>
         </ul>
     </div>
