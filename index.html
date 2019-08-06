@@ -26,7 +26,7 @@
         <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action" v-for="(todo, index) in todos" v-on:click="toggleDone(index)">
                 {{todo.name}}: {{todo.isDone}}
-                <i class="far fa-trash-alt text-right float-right"></i>                    
+                <i class="far fa-trash-alt text-right float-right" @click="deleteTodo(index)"></i>                    
             </a>
         </div>
     </div>
